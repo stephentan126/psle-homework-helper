@@ -1,0 +1,13 @@
+{
+  "n_rows": 21,
+  "figure_detected_rate": 0.095,
+  "chart_type_identified_rate": 1.0,
+  "values_extracted_rate": 0.0,
+  "final_answer_exact_match_rate": "N/A (extraction-only candidate, Issue 320)",
+  "n_errors": 19,
+  "per_row_detail_file": "per_row_results\\ibm-granite__granite-docling-258M.json",
+  "candidate": "ibm-granite/granite-docling-258M",
+  "load_time_s": 8.51,
+  "vram_delta_gb": 0.49,
+  "fits_8gb": true
+}

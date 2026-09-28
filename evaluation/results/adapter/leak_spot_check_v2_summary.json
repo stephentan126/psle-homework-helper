@@ -1,0 +1,55 @@
+{
+ "note": "text-free summary of the 8-row leak spot check re-run against step0_qlora_v2_r16_a32 (Issue 352); full texts stay in gitignored data/",
+ "rows": [
+  {
+   "question_id": 34,
+   "in_pool": true,
+   "answer_numeral_not_in_question_appears_in_base_output": [],
+   "answer_numeral_not_in_question_appears_in_v2_adapter_output": []
+  },
+  {
+   "question_id": 81,
+   "in_pool": true,
+   "answer_numeral_not_in_question_appears_in_base_output": [],
+   "answer_numeral_not_in_question_appears_in_v2_adapter_output": []
+  },
+  {
+   "question_id": 144,
+   "in_pool": true,
+   "answer_numeral_not_in_question_appears_in_base_output": [],
+   "answer_numeral_not_in_question_appears_in_v2_adapter_output": []
+  },
+  {
+   "question_id": 133,
+   "in_pool": true,
+   "answer_numeral_not_in_question_appears_in_base_output": [],
+   "answer_numeral_not_in_question_appears_in_v2_adapter_output": []
+  },
+  {
+   "question_id": 2500,
+   "in_pool": true,
+   "answer_numeral_not_in_question_appears_in_base_output": [],
+   "answer_numeral_not_in_question_appears_in_v2_adapter_output": []
+  },
+  {
+   "question_id": 349,
+   "in_pool": false,
+   "answer_numeral_not_in_question_appears_in_base_output": [],
+   "answer_numeral_not_in_question_appears_in_v2_adapter_output": []
+  },
+  {
+   "question_id": 3129,
+   "in_pool": false,
+   "answer_numeral_not_in_question_appears_in_base_output": [],
+   "answer_numeral_not_in_question_appears_in_v2_adapter_output": []
+  },
+  {
+   "question_id": 3876,
+   "in_pool": false,
+   "answer_numeral_not_in_question_appears_in_base_output": [],
+   "answer_numeral_not_in_question_appears_in_v2_adapter_output": []
+  }
+ ],
+ "rows_with_a_leaked_answer_numeral_base": 0,
+ "rows_with_a_leaked_answer_numeral_v2_adapter": 0
+}

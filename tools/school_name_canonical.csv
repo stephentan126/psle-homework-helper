@@ -1,0 +1,40 @@
+normalized_key,canonical_school_name,verified,notes
+acsjunior,ACS (Junior),true,Kept as a separate school after checking school records.
+acsprimary,ACS Primary,true,Kept as a separate school after checking school records.
+aitong,Ai Tong School,true,School name confirmed from the paper cover pages.
+catholichigh,Catholic High School (Primary),true,School name confirmed from the paper cover pages.
+chij,CHIJ St Nicholas Girls' School (Primary),true,School name confirmed from the paper cover pages.
+henrypark,Henry Park Primary School,true,School name confirmed from the paper cover pages.
+marisstella,Maris Stella High School (Primary Section),true,Same school as marisstellahigh; merged after checking school records.
+marisstellahigh,Maris Stella High School (Primary Section),true,Same school as marisstella; merged after checking school records.
+methodistgirls,Methodist Girls' School (Primary),true,Same school as mgs; merged after checking school records.
+mgs,Methodist Girls' School (Primary),true,Same school as methodistgirls; merged after checking school records.
+mgspayalebar,Paya Lebar Methodist Girls' School,true,Kept as a separate school after checking school records.
+nanchiau,Nan Chiau Primary School,true,School name confirmed from the paper cover pages.
+nanhua,Nan Hua Primary School,true,School name confirmed from the paper cover pages.
+nanyang,Nanyang Primary School,true,School name confirmed from the paper cover pages.
+payalebarmethodist,Paya Lebar Methodist Girls' School,true,Kept as a separate school after checking school records.
+peichun,Pei Chun Public School,true,School name confirmed from the paper cover pages.
+peihwa,Pei Hwa Presbyterian Primary School,true,School name confirmed from the paper cover pages.
+pslemath2014,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+pslemath2014answer+solution,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+pslemath2015,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+pslemath2015answer+solution,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+pslemath2016,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+pslemath2016answer+solution,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+pslemath2017,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+pslemath2017answer+solution,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+pslemath2018,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+pslemath2018answer+solution,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+pslemath2019,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+pslemath2019answer,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+pslemath2020,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+pslemath2020answer,N/A - not a school paper,true,National PSLE paper; confirmed from the cover or answer-key page.
+raffles,Raffles Girls' Primary School,true,Merged spellings of the same school; confirmed from the paper cover pages.
+rafflesgirls,Raffles Girls' Primary School,true,Merged spellings of the same school; confirmed from the paper cover pages.
+redswastika,Red Swastika School,true,School name confirmed from the paper cover pages.
+rosyth,Rosyth School,true,School name confirmed from the paper cover pages.
+scgs,Singapore Chinese Girls' School (Primary),true,Same school as singaporechinesegirls; merged after checking school records.
+singaporechinesegirls,Singapore Chinese Girls' School (Primary),true,Same school as scgs; merged after checking school records.
+taonan,Tao Nan School,true,Kept as a separate school after checking school records.
+temasek,Temasek Primary School,true,School name confirmed from the paper cover pages.

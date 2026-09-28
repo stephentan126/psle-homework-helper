@@ -1,0 +1,22 @@
+# Pinned from opendatalab/MinerU2.5-2509-1.2B's own Hugging Face README, fetched.
+# Unlike got_ocr2/paddleocr_vl, this README does NOT pin exact versions, only package names and
+# the transformers backend (mineru-vl-utils[transformers]), built on Qwen2VLForConditionalGeneration.
+# Installed latest-compatible and verified empirically (torch CUDA availability, real inference
+# output) rather than assuming versions, same discipline as the other two candidates.
+mineru-vl-utils[transformers]
+hf_transfer
+torch==2.7.1+cu118
+torchvision==0.22.1+cu118
+
+# GOTCHA: unpinned `torch`/`torchvision` resolved to the latest release
+# (2.13.0, CPU-only build) via plain `uv pip install`. Same class of issue as got_ocr2/
+# paddleocr_vl, needed --index-url https://download.pytorch.org/whl/cu118 to get a CUDA build.
+# SECOND gotcha: `uv pip install torch --index-url ...` alone did NOT reinstall, because uv saw
+# the unpinned "torch" requirement already satisfied by the CPU build and skipped it, needed
+# --reinstall to force it to actually resolve against the new index. Result: cu118 only publishes
+# up to torch==2.7.1 (same version the main backend and got_ocr2 env use), so this downgraded
+# from 2.13.0 to 2.7.1+cu118, confirmed transformers==4.57.6 and mineru_vl_utils still import
+# and run fine against that older torch.
+
+# HF_HUB_ENABLE_HF_TRANSFER=1 set for this env's downloads (faster weight transfer), per user
+# instructi, applies to every candidate from here on, not just this one.

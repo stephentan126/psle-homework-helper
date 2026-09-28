@@ -1,0 +1,14 @@
+{
+  "n_rows": 22,
+  "n_multi_part_rows": 5,
+  "figure_detected_rate": 1.0,
+  "geometry_type_identified_rate": 0.773,
+  "values_extracted_rate": 0.182,
+  "final_answer_exact_match_rate": 0.0,
+  "n_errors": 0,
+  "per_row_detail_file": "per_row_results\\Qwen__Qwen3-VL-8B-Instruct.json",
+  "candidate": "Qwen/Qwen3-VL-8B-Instruct",
+  "load_time_s": 39.59,
+  "vram_delta_gb": 6.29,
+  "fits_8gb": true
+}

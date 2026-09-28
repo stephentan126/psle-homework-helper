@@ -1,0 +1,11 @@
+{
+  "max_new_tokens": 600,
+  "n_rows_rerun_per_condition": {
+    "A_base": 159,
+    "B_rag_fewshot": 139,
+    "C_qlora_rag_fewshot": 148
+  },
+  "n_rows_rerun_total": 446,
+  "note": "A_base and B_rag_fewshot were generated in an earlier (separately-timed) process attempt that was OS-killed for low host memory before reaching condition C; this timing file's wall_clock_seconds covers ONLY this C-only recovery run, not the full 446-row wall-clock. See conversation report for the full incident timeline.",
+  "c_only_wall_clock_seconds": 2865.1
+}

@@ -1,0 +1,66 @@
+{
+ "n": 50,
+ "population": "50 question-bank questions whose cached gate result allows Tier 3 (seed 20260928); base weights, as served",
+ "tier_returned": {
+  "3": 50
+ },
+ "raw_leak": {
+  "CLEAN": 37,
+  "LEAK": 12,
+  "AMBIGUOUS": 1
+ },
+ "leak_guard": {
+  "clean": 38,
+  "replaced": 6,
+  "regenerated": 6
+ },
+ "has_diagram": 13,
+ "mean_seconds": 12.2,
+ "judge_cost_usd": 0.8499,
+ "scores": {
+  "scaffolding": {
+   "mean": 2.16,
+   "median": 2.0,
+   "dist": {
+    "1": 16,
+    "2": 20,
+    "3": 4,
+    "4": 10,
+    "5": 0
+   }
+  },
+  "age_appropriate": {
+   "mean": 2.84,
+   "median": 3.0,
+   "dist": {
+    "1": 0,
+    "2": 19,
+    "3": 21,
+    "4": 9,
+    "5": 1
+   }
+  },
+  "consistency": {
+   "mean": 3.5,
+   "median": 3.0,
+   "dist": {
+    "1": 7,
+    "2": 4,
+    "3": 16,
+    "4": 3,
+    "5": 20
+   }
+  },
+  "length_clarity": {
+   "mean": 1.96,
+   "median": 2.0,
+   "dist": {
+    "1": 13,
+    "2": 28,
+    "3": 7,
+    "4": 2,
+    "5": 0
+   }
+  }
+ }
+}

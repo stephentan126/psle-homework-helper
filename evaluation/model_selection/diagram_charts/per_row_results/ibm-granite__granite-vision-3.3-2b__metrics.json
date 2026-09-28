@@ -1,0 +1,13 @@
+{
+  "n_rows": 21,
+  "figure_detected_rate": 1.0,
+  "chart_type_identified_rate": 0.952,
+  "values_extracted_rate": 0.143,
+  "final_answer_exact_match_rate": 0.048,
+  "n_errors": 0,
+  "per_row_detail_file": "per_row_results\\ibm-granite__granite-vision-3.3-2b.json",
+  "candidate": "ibm-granite/granite-vision-3.3-2b",
+  "load_time_s": 50.05,
+  "vram_delta_gb": 1.7,
+  "fits_8gb": true
+}

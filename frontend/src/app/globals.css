@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  /* Colour tokens */
+  --color-primary: #2fa35a;
+  --color-primary-shadow: #1f7a40;
+  --color-secondary: #2e9ce0;
+  --color-secondary-shadow: #1e76ac;
+  --color-caution: #f5a623;
+  --color-caution-bg: #ffe9be;
+  --color-caution-text: #7a4a00;
+  --color-care-bg: #eff6f1;
+  --color-care-border: #cfe3d4;
+  --color-care-text: #3e6b52;
+  --color-background: #fafaf7;
+  --color-text: #2b2a28;
+  --color-border: #e5e5e5;
+  --color-error: #d1483f;
+  --color-error-bg: #fbeae8;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Button shadow depth */
+  --shadow-button-rest: 0 4px 0 var(--color-primary-shadow);
+  --shadow-button-rest-secondary: 0 4px 0 var(--color-secondary-shadow);
+  --shadow-button-pressed: 0 1px 0 var(--color-primary-shadow);
+  --shadow-button-pressed-secondary: 0 1px 0 var(--color-secondary-shadow);
+}
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-primary-shadow: var(--color-primary-shadow);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-shadow: var(--color-secondary-shadow);
+  --color-caution: var(--color-caution);
+  --color-caution-bg: var(--color-caution-bg);
+  --color-caution-text: var(--color-caution-text);
+  --color-care-bg: var(--color-care-bg);
+  --color-care-border: var(--color-care-border);
+  --color-care-text: var(--color-care-text);
+  --color-background: var(--color-background);
+  --color-text: var(--color-text);
+  --color-border: var(--color-border);
+  --color-error: var(--color-error);
+  --color-error-bg: var(--color-error-bg);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-pill: var(--radius-pill);
+
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+/* Browser surfaces carry the design too */
+::selection {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}

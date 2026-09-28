@@ -1,0 +1,44 @@
+{
+ "source": "precomputed_gate_results in psle.db, is_active=1, gate_version gate_v2_2026-09-02 (read-only query, 28 Sep 2026)",
+ "n": 3557,
+ "outcomes": {
+  "two_runs_disagreed": 1338,
+  "no_final_answer": 941,
+  "agreed_but_not_with_key": 627,
+  "expression_did_not_parse": 80,
+  "passed_tier2_only_method_mismatch": 31,
+  "passed_tiers_2_and_3": 540
+ },
+ "rescored_with_current_rules_gate_v4": {
+  "note": "stored answers re-compared with the current _values_equal and MCQ resolution; method alignment not re-run",
+  "additional_passing_answer_check": 89,
+  "passing_share": 0.186
+ },
+ "reasoning_agreements": {
+  "agreed_total": 1038,
+  "agreed_on_wrong_answer": 519
+ },
+ "audit_passed_sample": {
+  "n": 30,
+  "seed": 20260928,
+  "wrong_key_or_wrong_answer": 0,
+  "diagram_question_model_could_not_see": 1
+ },
+ "audit_agreed_but_rejected_sample": {
+  "n": 30,
+  "seed": 20260928,
+  "model_right": 21,
+  "model_right_key_format": 12,
+  "model_right_key_contains_working": 8,
+  "wrong_key": 1,
+  "model_wrong_or_unverifiable": 7,
+  "broken_row": 2,
+  "fixed_by_current_rules": 10
+ },
+ "coverage_bias": {
+  "mcq_share_passed": 0.496,
+  "mcq_share_all": 0.317,
+  "diagram_share_passed": 0.151,
+  "diagram_share_all": 0.491
+ }
+}
