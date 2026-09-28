@@ -1,0 +1,46 @@
+# Pinned from deepseek-ai/DeepSeek-OCR's own Hugging Face README, fetched.
+# Python 3.12.9 tested by the README; this env uses uv's managed 3.12.13 (close enough, same
+# minor version).
+torch==2.6.0+cu118
+transformers==4.46.3
+tokenizers==0.20.3
+einops
+addict
+easydict
+hf_xet
+torchvision==0.21.0+cu118  # matching companion for torch==2.6.0, NOT the unpinned version that
+                           # dragged torch up to 2.7.1 as a transitive dep, see gotcha below
+pillow  # required by the model's remote code, not listed in the README's own pin list
+
+# flash-attn==2.7.3 --no-build-isolation (README-pinned) DELIBERATELY NOT INSTALLED, see the
+# THIRD gotcha below. Fallback confirmed working: load without _attn_implementation='flash_attention_2'
+# at all (omit the kwarg), model uses its own default attention path instead. No functional
+# blocker, only a possible performance difference vs. the README's documented fast path, not
+# measured here since this is an offline-extraction bake-off, not a throughput benchmark.
+
+# GOTCHA, applies to every candidate from Qwen3-VL onward): the
+# HF_HUB_ENABLE_HF_TRANSFER env var (used for got_ocr2/paddleocr_vl/mineru25 per the original
+# user instruction) is DEPRECATED in the huggingface_hub version these newer transformers pull in
+# - HF has moved to a "Xet" storage backend by default, and hf_transfer is "not used anymore".
+# Real fast-download mechanism now: install the hf_xet package (above) and optionally set
+# HF_XET_HIGH_PERFORMANCE=1. Confirmed by the FutureWarning message printed on Qwen3-VL's run.
+#
+# SECOND GOTCHA: `uv pip install torch==2.6.0 --index-url .../cu118
+# --extra-index-url https://pypi.org/simple` resolved to the CPU-only wheel despite the cu118
+# index being primary, mixing --index-url with --extra-index-url let the plain PyPI CPU build
+# win. Fixed by using --index-url alone (no extra-index-url) plus --reinstall. Separately,
+# installing unpinned `torchvision` pulled in torch==2.7.1+cu118 as a transitive dep, silently
+# overriding the 2.6.0 pin, fixed by pinning torchvision==0.21.0 explicitly (the real companion
+# version for torch 2.6.0).
+#
+# THIRD GOTCHA, the big one: flash-attn==2.7.3 --no-build-isolation (as
+# the README pins) fails to build on this machine: `OSError: CUDA_HOME environment variable is
+# not set`. This machine has no system-wide CUDA toolkit installed (confirmed in the set-up phase's
+# canary work), PyTorch's wheels bundle their own CUDA runtime, which is NOT the same as the
+# full toolkit (nvcc, headers) a source build needs. Installing the full CUDA toolkit just for
+# this one optional acceleration dependency was judged not worth it (same spirit as the run
+# plan's own "don't chase the GGUF fallback for Unlimited-OCR" call). VERIFIED WORKING fallback:
+# omit `_attn_implementation='flash_attention_2'` from the AutoModel.from_pretrained() call
+# entirely, the model loads and runs fine on its default attention path. No functional gate
+# failure results from this; only a possible (unmeasured) throughput cost, irrelevant to an
+# offline per-page extraction bake-off.

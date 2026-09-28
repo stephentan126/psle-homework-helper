@@ -1,0 +1,148 @@
+{
+  "adapter_status": {
+    "configured_path": "<repo>\\models\\adapters\\step0_qlora_v2_r16_a32",
+    "applied": true,
+    "r": 16,
+    "lora_alpha": 32,
+    "merged": false,
+    "reason": "adapter applied (un-merged PEFT wrapper)"
+  },
+  "base_status": {
+    "configured_path": "",
+    "applied": false,
+    "reason": "adapter explicitly disabled (LLM_ADAPTER_PATH is empty) -- serving BASE weights"
+  },
+  "prompts": [
+    {
+      "kind": "tier1_hint",
+      "id": 23,
+      "adapter_on_differs_from_base": true,
+      "adapter_off_context_equals_separate_base_load": true,
+      "adapter_on_chars": 62,
+      "base_chars": 69
+    },
+    {
+      "kind": "tier1_hint",
+      "id": 24,
+      "adapter_on_differs_from_base": true,
+      "adapter_off_context_equals_separate_base_load": true,
+      "adapter_on_chars": 146,
+      "base_chars": 177
+    },
+    {
+      "kind": "tier1_hint",
+      "id": 25,
+      "adapter_on_differs_from_base": false,
+      "adapter_off_context_equals_separate_base_load": true,
+      "adapter_on_chars": 65,
+      "base_chars": 65
+    },
+    {
+      "kind": "tier1_hint",
+      "id": 27,
+      "adapter_on_differs_from_base": true,
+      "adapter_off_context_equals_separate_base_load": true,
+      "adapter_on_chars": 197,
+      "base_chars": 201
+    },
+    {
+      "kind": "solve_no_rag",
+      "id": 1,
+      "adapter_on_differs_from_base": true,
+      "adapter_off_context_equals_separate_base_load": true,
+      "adapter_on_chars": 625,
+      "base_chars": 628
+    },
+    {
+      "kind": "solve_no_rag",
+      "id": 2,
+      "adapter_on_differs_from_base": true,
+      "adapter_off_context_equals_separate_base_load": true,
+      "adapter_on_chars": 566,
+      "base_chars": 589
+    },
+    {
+      "kind": "solve_no_rag",
+      "id": 3,
+      "adapter_on_differs_from_base": true,
+      "adapter_off_context_equals_separate_base_load": true,
+      "adapter_on_chars": 465,
+      "base_chars": 501
+    }
+  ],
+  "eval_harness_spot_check": [
+    {
+      "id": 2,
+      "bucket": "complete",
+      "identical": true,
+      "first_divergence_char": null,
+      "live_chars": 946,
+      "recorded_chars": 946
+    },
+    {
+      "id": 3,
+      "bucket": "complete",
+      "identical": true,
+      "first_divergence_char": null,
+      "live_chars": 595,
+      "recorded_chars": 595
+    },
+    {
+      "id": 6,
+      "bucket": "complete",
+      "identical": true,
+      "first_divergence_char": null,
+      "live_chars": 520,
+      "recorded_chars": 520
+    },
+    {
+      "id": 7,
+      "bucket": "complete",
+      "identical": true,
+      "first_divergence_char": null,
+      "live_chars": 594,
+      "recorded_chars": 594
+    },
+    {
+      "id": 5,
+      "bucket": "cutoff",
+      "identical": true,
+      "first_divergence_char": null,
+      "live_chars": 484,
+      "recorded_chars": 484
+    },
+    {
+      "id": 18,
+      "bucket": "cutoff",
+      "identical": true,
+      "first_divergence_char": null,
+      "live_chars": 547,
+      "recorded_chars": 547
+    },
+    {
+      "id": 1,
+      "bucket": "fallback_no_rag",
+      "identical": true,
+      "first_divergence_char": null,
+      "live_chars": 631,
+      "recorded_chars": 631
+    },
+    {
+      "id": 4,
+      "bucket": "fallback_no_rag",
+      "identical": true,
+      "first_divergence_char": null,
+      "live_chars": 321,
+      "recorded_chars": 321
+    }
+  ],
+  "totals": {
+    "prompts": 7,
+    "adapter_on_differs_from_base": 6,
+    "adapter_off_context_matches_separate_base_load": 7,
+    "eval_spot_check_rows": 8,
+    "eval_spot_check_identical_to_recorded": 8,
+    "adapter_peak_vram_gb": 3.357,
+    "base_peak_vram_gb": 3.187
+  }
+}

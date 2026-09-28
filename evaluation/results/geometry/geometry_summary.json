@@ -1,0 +1,47 @@
+{
+  "hosted_model_feasibility_check_17_rows": {
+    "summary": {
+      "status": "complete",
+      "model": "claude-opus-5",
+      "rows_recorded": 17,
+      "correct_on_parsed_line": 16,
+      "correct_harness_style": 16,
+      "rows_with_final_answer_line": 17,
+      "total_input_tokens": 84217,
+      "total_output_tokens": 36816,
+      "total_cost_usd": 1.341485,
+      "total_latency_s": 508.2
+    }
+  },
+  "qwen25vl_7b_600tok_rescored": {
+    "summary": {
+      "n_scored_rows": 17,
+      "parsed_line_correct": 6,
+      "parsed_line_correct_ids": [
+        "3",
+        "1337",
+        "183",
+        "500",
+        "1663",
+        "1745"
+      ],
+      "harness_style_correct": 7,
+      "harness_style_correct_ids": [
+        "3",
+        "1337",
+        "183",
+        "1348",
+        "500",
+        "1663",
+        "1745"
+      ],
+      "harness_style_rate": 0.412,
+      "parsed_line_rate": 0.353,
+      "rows_whose_score_changed_vs_original_run": [
+        "1745"
+      ],
+      "rows_with_parsed_final_answer_line": 12
+    },
+    "note": "CPU-only re-score of saved 600-token answers after Issue 344; nothing regenerated."
+  }
+}

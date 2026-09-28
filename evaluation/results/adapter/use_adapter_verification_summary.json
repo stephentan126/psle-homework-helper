@@ -1,0 +1,49 @@
+{
+  "adapter_status": {
+    "configured_path": "<repo>\\models\\adapters\\step0_qlora_v2_r16_a32",
+    "applied": true,
+    "r": 16,
+    "lora_alpha": 32,
+    "merged": false,
+    "reason": "adapter applied (un-merged PEFT wrapper)"
+  },
+  "base_status": {
+    "configured_path": "",
+    "applied": false,
+    "reason": "adapter explicitly disabled (LLM_ADAPTER_PATH is empty) -- serving BASE weights"
+  },
+  "greedy_use_adapter_false_equals_recorded_separate_base_load": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "greedy_default_equals_recorded_adapter_on_hint_path_unchanged": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "sampled_use_adapter_false_equals_separate_base_load": [
+    true,
+    true,
+    true
+  ],
+  "sampled_use_adapter_true_differs_from_base": [
+    true,
+    true,
+    true
+  ],
+  "totals": {
+    "greedy_use_adapter_false_equals_recorded_separate_base_load": "7/7",
+    "greedy_default_equals_recorded_adapter_on_hint_path_unchanged": "7/7",
+    "sampled_use_adapter_false_equals_separate_base_load": "3/3",
+    "sampled_use_adapter_true_differs_from_base": "3/3"
+  }
+}

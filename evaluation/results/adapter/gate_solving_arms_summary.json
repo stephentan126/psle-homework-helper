@@ -1,0 +1,15 @@
+{
+  "n_questions": 80,
+  "no_answer_base": 17,
+  "no_answer_adapter": 32,
+  "passes_missing_a_final_answer_base": 26,
+  "passes_missing_a_final_answer_adapter": 47,
+  "passed_base": 17,
+  "passed_adapter": 15,
+  "no_answer_base_only": 2,
+  "no_answer_adapter_only": 17,
+  "no_answer_mcnemar_p": 0.0007,
+  "passed_base_only": 5,
+  "passed_adapter_only": 3,
+  "passed_mcnemar_p": 0.7266
+}

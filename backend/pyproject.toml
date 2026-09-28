@@ -1,0 +1,68 @@
+[project]
+name = "psle-homework-helper-backend"
+version = "0.1.0"
+description = "PSLE AI Homework Helper backend"
+requires-python = ">=3.11,<3.13"
+
+# The CUDA toolkit, the torch build and bitsandbytes must be a matched set. This set was confirmed
+# on the target laptop (RTX 4060 Laptop 8GB, Windows 11) by scripts/setup/environment_canary.py.
+# Re-run the canary before changing any of them.
+#
+# The +cu118 torch build is only on PyTorch's own wheel index, not on PyPI, so install with:
+#   pip install -e ".[dev]" --extra-index-url https://download.pytorch.org/whl/cu118
+dependencies = [
+    # Web framework
+    "fastapi==0.115.0",
+    "uvicorn[standard]==0.32.0",
+    "sqlalchemy==2.0.35",
+    "pydantic==2.9.2",
+    "python-multipart==0.0.32",       # Needed by FastAPI for photo uploads (UploadFile).
+
+    # Security
+    "argon2-cffi==23.1.0",            # Parent PIN hashing.
+
+    # Models (confirmed by the environment canary)
+    "torch==2.7.1+cu118",             # Bundles its own CUDA 11.8 runtime.
+    "torchvision==0.22.1",            # The version paired with torch 2.7.1; needed by the vision model.
+    "pillow==11.0.0",                 # Image input for the vision model.
+    "bitsandbytes==0.49.2",           # 4-bit NF4 loading.
+    "transformers==5.12.1",
+    "accelerate==1.14.0",             # Required by transformers for device_map="auto".
+    "sympy==1.13.3",                  # Exact arithmetic for the gate.
+
+    # Fine-tuning experiment (scripts/training/)
+    "peft==0.20.0",
+    "trl==1.13.0",
+
+    # Question matching
+    "sentence-transformers==6.0.1",   # Loads Qwen3-Embedding-0.6B.
+    "numpy==2.1.2",                   # Cosine similarity; the question bank is too small to need a
+                                      # vector database (Issue 52).
+
+    # Page rendering for the offline extraction pipeline. The two OCR readers themselves run in
+    # their own environments (evaluation/model_selection/ocr_extraction/envs/) because their
+    # transformers versions conflict with this one.
+    "pymupdf==1.27.2.2",
+
+    # Image processing. opencv-contrib-python, not opencv-python, because only the contrib build
+    # provides a working line segment detector (Issue 63).
+    "opencv-contrib-python==4.10.0.84",
+
+    # Optional and paid: used only by the offline evaluation scripts (hint-quality judge and the
+    # geometry feasibility check). The app never calls it.
+    "anthropic==1.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.3",
+    "pytest-asyncio==0.24.0",
+    "httpx==0.27.2",                  # FastAPI test client.
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+    "gpu: needs an NVIDIA GPU and the downloaded models",
+]

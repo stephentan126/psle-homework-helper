@@ -1,0 +1,7 @@
+model,hf_repo,peak_vram_gb,fits_8gb_gate,pages_scored,pages_with_errors,mean_cer,mean_wer,table_markup_pages,diagram_detected_pages,fidelity_match,fidelity_mismatch,fidelity_not_found,fidelity_merged_with_bracket
+got_ocr2,stepfun-ai/GOT-OCR2_0,2.53,True,15,,2.411152273632533,3.5083923320774035,0/4,0/7,29,3,3,0
+paddleocr_vl,PaddlePaddle/PaddleOCR-VL,2.9,True,15,,2.37889562536818,3.51436369492147,4/4,7/7,35,0,0,0
+mineru25,opendatalab/MinerU2.5-2509-1.2B,2.15,True,15,,2.658377565794565,4.178586393107679,4/4,7/7,35,0,0,0
+qwen3_vl_2b,Qwen/Qwen3-VL-2B-Instruct,3.96,True,15,,2.4441947458321054,3.4903490775347277,1/4,0/7,35,0,0,0
+deepseek_ocr,deepseek-ai/DeepSeek-OCR,6.39,True,15,,2.1976123335499502,3.248156066380263,4/4,7/7,35,0,0,0
+unlimited_ocr,baidu/Unlimited-OCR,6.31,True,15,,2.5402662218137864,3.568472128724904,4/4,7/7,35,0,0,0

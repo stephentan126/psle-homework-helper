@@ -1,0 +1,17 @@
+{
+  "n_rows": 22,
+  "n_multi_part_rows": 5,
+  "figure_detected_rate": 1.0,
+  "geometry_type_identified_rate": 0.909,
+  "values_extracted_rate": 0.318,
+  "final_answer_exact_match_rate": 0.353,
+  "n_errors": 0,
+  "per_row_detail_file": "per_row_results_answer600\\Qwen__Qwen2.5-VL-7B-Instruct.json",
+  "candidate": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "answer_max_new_tokens": 600,
+  "load_time_s": 16.74,
+  "vram_delta_gb": 5.82,
+  "fits_8gb": true,
+  "evaluate_wall_s": 514.5,
+  "peak_vram_gb": 6.64
+}

@@ -1,0 +1,117 @@
+{
+  "A_base": {
+    "n": 388,
+    "correct_before": 54,
+    "correct_after": 56,
+    "no_final_before": 43,
+    "no_final_after": 0,
+    "newly_parsed": 43,
+    "newly_parsed_correct": 2,
+    "newly_parsed_cutoff_rows": [
+      36,
+      1
+    ],
+    "newly_parsed_finished_rows": [
+      7,
+      1
+    ],
+    "rows_lacking_line_that_were_cutoff": 36,
+    "mcnemar_before_vs_after": {
+      "after_only_right": 2,
+      "before_only_right": 0,
+      "p": 0.5
+    }
+  },
+  "B_rag_fewshot": {
+    "n": 388,
+    "correct_before": 50,
+    "correct_after": 52,
+    "no_final_before": 36,
+    "no_final_after": 0,
+    "newly_parsed": 36,
+    "newly_parsed_correct": 2,
+    "newly_parsed_cutoff_rows": [
+      22,
+      2
+    ],
+    "newly_parsed_finished_rows": [
+      14,
+      0
+    ],
+    "rows_lacking_line_that_were_cutoff": 22,
+    "mcnemar_before_vs_after": {
+      "after_only_right": 2,
+      "before_only_right": 0,
+      "p": 0.5
+    }
+  },
+  "C_qlora_rag_fewshot": {
+    "n": 388,
+    "correct_before": 50,
+    "correct_after": 53,
+    "no_final_before": 52,
+    "no_final_after": 4,
+    "newly_parsed": 48,
+    "newly_parsed_correct": 3,
+    "newly_parsed_cutoff_rows": [
+      26,
+      2
+    ],
+    "newly_parsed_finished_rows": [
+      22,
+      1
+    ],
+    "rows_lacking_line_that_were_cutoff": 26,
+    "mcnemar_before_vs_after": {
+      "after_only_right": 3,
+      "before_only_right": 0,
+      "p": 0.25
+    }
+  },
+  "C2_qlora_r16a32_rag_fewshot": {
+    "n": 388,
+    "correct_before": 58,
+    "correct_after": 58,
+    "no_final_before": 49,
+    "no_final_after": 5,
+    "newly_parsed": 44,
+    "newly_parsed_correct": 0,
+    "newly_parsed_cutoff_rows": [
+      27,
+      0
+    ],
+    "newly_parsed_finished_rows": [
+      17,
+      0
+    ],
+    "rows_lacking_line_that_were_cutoff": 27,
+    "mcnemar_before_vs_after": {
+      "after_only_right": 0,
+      "before_only_right": 0,
+      "p": 1.0
+    }
+  },
+  "C3_qlora_masked_rag_fewshot": {
+    "n": 388,
+    "correct_before": 54,
+    "correct_after": 55,
+    "no_final_before": 45,
+    "no_final_after": 0,
+    "newly_parsed": 45,
+    "newly_parsed_correct": 1,
+    "newly_parsed_cutoff_rows": [
+      30,
+      1
+    ],
+    "newly_parsed_finished_rows": [
+      15,
+      0
+    ],
+    "rows_lacking_line_that_were_cutoff": 30,
+    "mcnemar_before_vs_after": {
+      "after_only_right": 1,
+      "before_only_right": 0,
+      "p": 1.0
+    }
+  }
+}

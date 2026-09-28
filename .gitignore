@@ -1,0 +1,59 @@
+# ---------------------------------------------------------------------------
+# Copyrighted source material and anything derived from it. Never commit.
+# The exam papers are used for computational analysis only (Copyright Act 2021,
+# ss. 243-244); they, and data extracted from them, are not redistributed.
+# ---------------------------------------------------------------------------
+data/**/*.pdf
+data/Handwritten/
+data/gold_set_candidates/
+data/extracted/
+**/gold_pages/
+**/gold_set_labels/
+
+# Private data: photos submitted through the app and the databases,
+# which hold the question bank and student attempts.
+data/student_submissions/
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# Model weights (size and licence terms)
+/models/
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+
+# Secrets
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+
+# Frontend (see also frontend/.gitignore)
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Logs, except the small fixtures some tests read
+*.log
+!backend/tests/fixtures/*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Photo fixtures used by some tests are real exam pages. Never commit.
+backend/tests/_fixtures/
